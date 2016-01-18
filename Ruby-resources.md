@@ -26,3 +26,29 @@ You can  exit out of IRB, with any of the following commands `exit`, `quit`, `ir
 albertowusuasare:~/workspace $ 
 ```
 There are alternatives to IRB that you can use. A simple google querry will yield various results. A popular online interpreter is [repl.it] (https://repl.it/languages/ruby)
+
+Ruby Types
+----------
+Below are some of the basic types supported by Ruby:
+
+|Example |Type |
+|--------|:---:|
+|123     | Integer  |
+|9.88    |Float     |
+|?c      | Character|
+|'string'|String    |
+|"string"| Double quoted String|
+|:symbol | symbol|
+| ["Sum","Some","Sam"] | Array |
+|{"dog"=>"canine", "cat"=>"feline", "donkey"=>"asinine"} |Associative array (Hash)|
+
+
+
+Ruby Conventions
+-----------------
+For conventions accepted by the ruby community visit any of the links below:
++ [https://github.com/styleguide/ruby](https://github.com/styleguide/ruby)
++ [https://github.com/airbnb/ruby] (https://github.com/airbnb/ruby)
+
+Again a quick google search for ruby conventions should yield various useful results
+
