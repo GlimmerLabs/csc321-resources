@@ -42,8 +42,95 @@ Below are some of the basic types supported by Ruby:
 | ["Sum","Some","Sam"] | Array |
 |{"dog"=>"canine", "cat"=>"feline", "donkey"=>"asinine"} |Associative array (Hash)|
 
+Basics
+--------
 
+**Print statements**
+```
+2.2.1 :003 > puts "Hello World"
+Hello World
+ => nil 
+ ```
+ **Variables**
+ ```
+local_var = 'This variable lives in a code block'
+@instance_var = "I am a variable bound to an instance of a class"
+@@class_var = " I am a variable that is in a class"
+$global_var = "I am a global  variable and can be accessed everywhere"
+CONSTANT = "I am some constant"
+ ```
+ **Methods**
+ ```
+ def method_name(parameter)
+   ......
+ end
+ 
+ def no_param_method
+   ...
+ end
+ ```
+ ***Classes***
+ ```
+ class Greeter
+   def greet
+     puts "Hello CSC 321 Student"
+   end
+ end
+ ```
+ Class instantiation :
+ ```
+ 2.2.1 :017 > gt = Greeter.new
+ => #<Greeter:0x000000015a45c8> 
+2.2.1 :018 > gt.greet
+Hello CSC 321 Student
+ => nil 
+ ```
+Conditionals && Control Structures
+-------------------
+**If-else**
+```
+if (condition)
+ ... do something...
+else
+ ... do another thing ...
+end
+```
+Example:
+```
+def is_class_day?(day)
+    if(day == "Monday" || day == "Wednesday" || day == "Friday")
+        puts true
+    else
+        puts false
+    end
+end
 
+2.2.1 :026 > is_class_day?("Friday")
+true
+ => nil 
+```
+**Unless**
+```
+unless condition 
+   ... do something ...
+else
+   .. do another thing...
+end
+```
+Example:
+```
+def enough_water?(cups)
+    unless (cups >= 8)
+        puts false
+    else
+        puts true
+    end
+end
+
+2.2.1 :034 > enough_water?(7)
+false
+ => nil 
+```
 Ruby Conventions
 -----------------
 For conventions accepted by the ruby community visit any of the links below:
