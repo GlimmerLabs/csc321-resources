@@ -109,6 +109,25 @@ end
 true
  => nil 
 ```
+
+**If - modifier**
+```
+...something... if condition
+
+```
+Example:
+```
+2.2.1 :004 > class_in_session  = true
+ => true 
+2.2.1 :005 > puts "CSC 321 is the best class ever" if class_in_session
+CSC 321 is the best class ever
+ => nil 
+ 
+ 2.2.1 :006 > class_in_session  = false
+ => false 
+2.2.1 :007 > puts "CSC 321 is the best class ever" if class_in_session
+ => nil 
+```
 **Unless**
 ```
 unless condition 
@@ -129,6 +148,24 @@ end
 
 2.2.1 :034 > enough_water?(7)
 false
+ => nil 
+```
+More on methods & classes
+-------------------
+**Default method arguments**
+
+Methods can take in default argument for cases where the value of some argument was not specified:
+Example
+```
+def greet(name="CSC 151 student")
+    puts "Hello " + name
+end
+
+2.2.1 :011 > greet
+Hello CSC 151 student
+ => nil 
+2.2.1 :012 > greet("Sam")
+Hello Sam
  => nil 
 ```
 Ruby Conventions
