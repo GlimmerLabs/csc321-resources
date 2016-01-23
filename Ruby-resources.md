@@ -168,6 +168,100 @@ Hello CSC 151 student
 Hello Sam
  => nil 
 ```
+**Attribute Accessors**
+
+Ruby has a special functionality that helps in the creation of getters and setters for instance or class variables.
+
+|Accessor Type| Description|
+|----------| --------------|
+|attr_reader | End users of this class have "read only" access to the variable |
+|attr_writer            | End users of this class have "write only" access to the variable |
+|attr_accessor | End users are able to both read and write to the variable|
+
+Example (attr_reader):
+```
+class Student
+    attr_reader :name
+     def initialize
+         @name = "Albert"
+     end
+end
+
+2.2.1 :041 > student_321 = Student.new
+ => #<Student:0x00000001c106a0 @name="Some Default Student"> 
+2.2.1 :042 > student_321.name
+ => "Some Default Student" 
+ 
+ 2.2.1 :043 > student_321.name = "Sam"
+NoMethodError: undefined method `name=' for #<Student:0x00000001c106a0 @name="Some Default Student">
+        from (irb):43
+        from /usr/local/rvm/rubies/ruby-2.2.1/bin/irb:11:in `<main>'
+        
+```
+Example (attr_writer):
+```
+class Student
+    attr_writer :name
+     def initialize
+         @name = "Some Default Student"
+     end
+end
+
+2.2.1 :051 > student_321 = Student.new
+ => #<Student:0x00000001b5b1b0 @name="Some Default Student"> 
+2.2.1 :052 > student_321.name = "Sam"
+ => "Sam" 
+ 
+ 2.2.1 :009 >   student_321 = Student.new
+ => #<Student:0x000000020bb380 @name="Some Default Student"> 
+2.2.1 :010 > student_321.name
+NoMethodError: undefined method `name' for #<Student:0x000000020bb380 @name="Some Default Student">
+        from (irb):10
+        from /usr/local/rvm/rubies/ruby-2.2.1/bin/irb:11:in `<main>'
+```
+Example (attr_accessor):
+```
+class Student
+   
+    attr_accessor :name
+     def initialize
+         @name = "Some Default Student"
+     end
+end
+
+2.2.1 :021 >   student_321 = Student.new
+ => #<Student:0x00000001ffe708 @name="Some Default Student"> 
+2.2.1 :022 > student_321.name
+ => "Some Default Student" 
+2.2.1 :023 > student_321.name ="Sam"
+ => "Sam" 
+```
+**Inheritance**
+
+Example
+```
+class Parent
+    def display
+        puts "Parent display"
+    end
+end
+
+class Child < Parent
+end
+
+2.2.1 :035 >   parent = Parent.new
+ => #<Parent:0x00000001f0be90> 
+2.2.1 :036 > parent.display
+Parent display
+ => nil 
+2.2.1 :037 > 
+2.2.1 :038 >   child = Child.new
+ => #<Child:0x00000001ef76e8> 
+2.2.1 :039 > child.display
+Parent display
+ => nil 
+```
+
 Ruby Conventions
 -----------------
 For conventions accepted by the ruby community visit any of the links below:
